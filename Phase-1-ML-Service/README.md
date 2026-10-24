@@ -281,5 +281,3 @@ Task-2-Phase-1-ML-Service/
 ## Project Status
 
 The initial ML model has been trained and evaluated, and the saved model artifact and metrics are available. The Flask API includes input validation, a 128 KB request-body limit with a JSON `413` response, and safer model loading. All 24 automated test cases passed in the latest verified run. Docker build and container API validation were completed before the latest `app.py` changes and still need to be repeated.
-
-**Remaining submission activities:** Final documentation review, AI-assisted workflow log, screenshots, test evidence, and narrated demonstration recording.
