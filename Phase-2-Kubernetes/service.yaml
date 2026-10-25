@@ -1,0 +1,16 @@
+# The Service gives your running API a stable network endpoint, even if Kubernetes replaces its pod.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: ml-prediction-service
+  namespace: ml-prediction
+spec:
+  type: NodePort
+  selector:
+    app: ml-prediction-api
+  ports:
+    - port: 5001
+      targetPort: 5001
+      nodePort: 30081
+      protocol: TCP

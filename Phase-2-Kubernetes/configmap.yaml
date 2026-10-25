@@ -1,0 +1,10 @@
+# A ConfigMap stores non-secret configuration separately from your application image. We'll use it to record the application settings and model version
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ml-prediction-config
+  namespace: ml-prediction
+data:
+  APP_ENV: "kubernetes"
+  MODEL_VERSION: "1.0"
+  MODEL_METRICS_PATH: "/app/model/metrics.json"

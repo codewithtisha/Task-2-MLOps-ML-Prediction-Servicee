@@ -1,0 +1,45 @@
+# The Deployment tells Kubernetes how to run your ML prediction API, which Docker image to use, and how to keep the application healthy.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ml-prediction-api
+  namespace: ml-prediction
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ml-prediction-api
+  template:
+    metadata:
+      labels:
+        app: ml-prediction-api
+    spec:
+      containers:
+        - name: ml-prediction-api
+          image: task2-ml-service:1.0
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5001
+          envFrom:
+            - configMapRef:
+                name: ml-prediction-config
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 5001
+            initialDelaySeconds: 15
+            periodSeconds: 20
