@@ -1,5 +1,5 @@
 {
-  "model_version": "1.0.0",
+  "model_version": "1.1.0",
   "random_seed": 42,
   "dataset": "scikit-learn 20 Newsgroups",
   "categories": [
@@ -10,18 +10,18 @@
   ],
   "train_samples": 2983,
   "test_samples": 746,
-  "accuracy": 0.8806970509383378,
+  "accuracy": 0.8793565683646113,
   "classification_report": {
     "comp.graphics": {
-      "precision": 0.925,
+      "precision": 0.9203980099502488,
       "recall": 0.9487179487179487,
-      "f1-score": 0.9367088607594937,
+      "f1-score": 0.9343434343434344,
       "support": 195.0
     },
     "rec.sport.baseball": {
-      "precision": 0.8169642857142857,
-      "recall": 0.9195979899497487,
-      "f1-score": 0.8652482269503546,
+      "precision": 0.8198198198198198,
+      "recall": 0.914572864321608,
+      "f1-score": 0.8646080760095012,
       "support": 199.0
     },
     "sci.space": {
@@ -31,22 +31,22 @@
       "support": 197.0
     },
     "talk.politics.misc": {
-      "precision": 0.9097744360902256,
+      "precision": 0.9029850746268657,
       "recall": 0.7806451612903226,
-      "f1-score": 0.8402777777777778,
+      "f1-score": 0.8373702422145328,
       "support": 155.0
     },
-    "accuracy": 0.8806970509383378,
+    "accuracy": 0.8793565683646113,
     "macro avg": {
-      "precision": 0.8851569026733501,
-      "recall": 0.8754382445326522,
-      "f1-score": 0.8781752966827874,
+      "precision": 0.8830229483214558,
+      "recall": 0.874181963125617,
+      "f1-score": 0.876697018452748,
       "support": 746.0
     },
     "weighted avg": {
-      "precision": 0.8834812889574248,
-      "recall": 0.8806970509383378,
-      "f1-score": 0.8801173536886748,
+      "precision": 0.881629428636351,
+      "recall": 0.8793565683646113,
+      "f1-score": 0.8787241684330925,
       "support": 746.0
     }
   }

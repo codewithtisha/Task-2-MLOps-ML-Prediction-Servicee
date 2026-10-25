@@ -20,7 +20,7 @@ METRICS_PATH = MODEL_DIR / "metrics.json"
 
 # Reproducibility settings.
 RANDOM_SEED = 42
-MODEL_VERSION = "1.0.0"
+MODEL_VERSION = "1.1.0"
 
 CATEGORIES = [
     "comp.graphics",
@@ -52,7 +52,7 @@ def main():
     # Bundle text processing and classification into one pipeline.
     model = Pipeline(
         [
-            ("tfidf", TfidfVectorizer(max_features=20000)),
+            ("tfidf", TfidfVectorizer(max_features=30000)),
             (
                 "classifier",
                 LogisticRegression(max_iter=1000, random_state=RANDOM_SEED),
