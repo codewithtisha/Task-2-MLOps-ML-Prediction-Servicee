@@ -25,7 +25,7 @@ def test_valid_prediction():
     assert response.status_code == 200
     data = response.get_json()
     assert data["prediction"] == "sci.space"
-    assert data["model_version"] == "1.0.0"
+    assert data["model_version"] == "1.1.0"
 
 
 def test_empty_text_is_rejected():
