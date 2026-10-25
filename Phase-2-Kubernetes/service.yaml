@@ -12,5 +12,7 @@ spec:
   ports:
     - port: 5001
       targetPort: 5001
-      nodePort: 30081
+      nodePort: 30081 
+      # This maps the Service's port 5001 to port 30081 on the Minikube node.
+      # use for Minikube's service access command to reach it locally.
       protocol: TCP
